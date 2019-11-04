@@ -63,4 +63,27 @@ public class ClientRegister extends Client {
         }
         return total.size() ;
     }
+    public int getTotalServiceLevelPlatium(){
+        int total = 0;
+        for(Client eachPlatiumClient: clients){
+            if(eachPlatiumClient.getServiceLevel()==ServiceLevel.Platinum){
+                System.out.println(eachPlatiumClient);
+            }
+
+            total +=eachPlatiumClient;
+        }
+        return total.size() ;
+    }
+
+    public int getTotalServiceLevelPremium(){
+        int total = 0;
+        for(Client eachPremiumClient: clients){
+            if(eachPremiumClient.getServiceLevel()==ServiceLevel.Premium){
+                System.out.println(eachPremiumClient);
+            }
+
+            total +=eachPremiumClient;
+        }
+        return total.size() ;
+    }
 }
