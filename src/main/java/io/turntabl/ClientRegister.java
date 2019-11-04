@@ -3,7 +3,7 @@ package io.turntabl;
 import java.util.Arrays;
 import java.util.List;
 
-public class Numbers {
+public class ClientRegister {
     public static boolean isGreaterThanZeroAndLessThanAThousand(int i){
         return greaterThanZero(i) && lessThanAThousand(i);
     }
