@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ClientRegister extends Client {
     private List<Client> clients;
@@ -51,8 +52,15 @@ public class ClientRegister extends Client {
 
     }
 
-    public void getTotalServiceLevel(){
+    public double getTotalServiceLevelGold(){
+        double total = 0;
+       for(Client eachGoldClient: clients){
+           if(eachGoldClient.getServiceLevel()==ServiceLevel.Gold){
+               System.out.println(eachGoldClient);
+           }
 
-        }
+        total +=eachGoldClient;
     }
+ return total.size() ;
+}
 }

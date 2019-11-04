@@ -4,16 +4,21 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ClientTest {
+class ClientRegisterTest {
 
     @Test
     void getClients() {
-        //assertArrayEquals(ServiceLevel.Gold );
     }
 
     @Test
-    public void TestClientNameID() {
-        assertEquals();
+    void getGoldClients() {
     }
 
+    @Test
+    void getClientNameID() {
+    }
+
+    @Test
+    void getTotalServiceLevelGold() {
+    }
 }
