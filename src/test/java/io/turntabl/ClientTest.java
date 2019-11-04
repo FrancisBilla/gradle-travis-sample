@@ -13,7 +13,8 @@ class ClientTest {
 
     @Test
     public void TestClientNameID() {
-        assertEquals();
+        Client client = new Client("Junior",5884,ServiceLevel.Platinum,ClientType.Corporate);
+        assertEquals(5884,getClients());
     }
 
 }

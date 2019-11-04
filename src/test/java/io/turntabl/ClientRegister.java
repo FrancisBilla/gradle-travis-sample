@@ -52,15 +52,15 @@ public class ClientRegister extends Client {
 
     }
 
-    public double getTotalServiceLevelGold(){
-        double total = 0;
+    public int getTotalServiceLevelGold(){
+        int total = 0;
        for(Client eachGoldClient: clients){
            if(eachGoldClient.getServiceLevel()==ServiceLevel.Gold){
                System.out.println(eachGoldClient);
            }
 
         total +=eachGoldClient;
+        }
+        return total.size() ;
     }
- return total.size() ;
-}
 }
