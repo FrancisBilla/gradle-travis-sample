@@ -4,17 +4,21 @@ import java.util.Arrays;
 import java.util.List;
 
 
-    public class ClientRegister extends Client {
+
+
+    public class ClientRegister{
         private List<Client> clients;
 
-        public ClientRegister(String clientName, int clientID, ServiceLevel serviceLevel, ClientType clientType, List<Client> clients) {
-            super(clientName, clientID, serviceLevel, clientType);
+        public ClientRegister(List<Client> clients) {
             this.clients = clients;
         }
 
 
+
+
         //COLLECTION OF CLIENTS
         public List<Client> getClients() {
+            /*
             List<Client> clients = Arrays.asList(
               new Client("Francis",2134,ServiceLevel.Gold,ClientType.Private),
               new Client("Dennis",3213,ServiceLevel.Gold,ClientType.Corporate),
@@ -23,24 +27,29 @@ import java.util.List;
               new Client("Shadrack",5432,ServiceLevel.Premium,ClientType.Private),
               new Client("Mary",4321,ServiceLevel.Gold,ClientType.Corporate)
              );
-
+*/
             return getClients();
         }
 
         //CONTACT NAMES OF ALL GOLD CLIENTS
-        public void getGoldClients(){
+
+        public Client getGoldClients(){
             for (Client eachClient: clients){
                 if(eachClient.getServiceLevel() == ServiceLevel.Gold ){
-                    System.out.println("The client name is : "+ getClientName());
+                    System.out.println("The client name is : "+ eachClient.getClientName());
                 }
             }
-
+            return getGoldClients();
         }
 
         //GET CLIENT'S NAME BY ID
 
-
-
+/*
+        int count = clients.stream()
+                .filter(o -> o.getServiceLevel() == ServiceLevel.Gold)
+                .mapToInt(ServiceLevel.Gold::getServiceLevel).count();
+*/
+/*
         public void getClientNameID(int clientIDD){
             for(Client eachClient: clients){
                 if(eachClient.getClientID() == clientIDD){
@@ -84,5 +93,5 @@ import java.util.List;
             }
             return total.size() ;
         }
-    }
+    } */
 }

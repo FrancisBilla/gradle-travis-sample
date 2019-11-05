@@ -7,14 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class ClientTest {
 
     @Test
-    void getClients() {
+    public void testGetClients() {
+
+
         //assertArrayEquals(ServiceLevel.Gold );
     }
 
     @Test
-    public void TestClientNameID() {
-        Client client = new Client("Junior",5884,ServiceLevel.Platinum,ClientType.Corporate);
-        assertEquals(5884,getClients());
+    public void testClientNameID() {
+
     }
 
 }
