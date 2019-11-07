@@ -18,16 +18,6 @@ import java.util.List;
 
         //COLLECTION OF CLIENTS
         public List<Client> getClients() {
-            /*
-            List<Client> clients = Arrays.asList(
-              new Client("Francis",2134,ServiceLevel.Gold,ClientType.Private),
-              new Client("Dennis",3213,ServiceLevel.Gold,ClientType.Corporate),
-              new Client("Sam",0034,ServiceLevel.Premium,ClientType.Corporate),
-              new Client("Alex",7564,ServiceLevel.Platinum,ClientType.Corporate),
-              new Client("Shadrack",5432,ServiceLevel.Premium,ClientType.Private),
-              new Client("Mary",4321,ServiceLevel.Gold,ClientType.Corporate)
-             );
-*/
             return getClients();
         }
 

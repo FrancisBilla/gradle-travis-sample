@@ -11,8 +11,9 @@ public class CorporateClient extends Client {
         this.accountManagerName = accountManagerName;
     }
 
+
     @Override
     public String getClientName() {
-        return accountManagerName;
+        return this.accountManagerName;
     }
 }

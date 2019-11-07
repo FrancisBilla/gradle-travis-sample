@@ -1,25 +1,36 @@
 package io.turntabl;
 
 import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
 
 class ClientRegisterTest {
 
-    @Test
-   public void testGetClients() {
-     Client client1 = new Client("Francis",2134,ServiceLevel.Gold);
-     Client client2 =  new Client("Sam",0034,ServiceLevel.Premium);
-     Client client3 =  new Client("Alex",7564,ServiceLevel.Platinum);
-     Client client4 =  new Client("Shadrack",5432,ServiceLevel.Premium);
-     Client client5 =  new Client("Mary",4321,ServiceLevel.Gold);
-     Client client6 =  new Client("Dennis",3213,ServiceLevel.Gold);
+/*
+    ClientRegister mockedRegister =mock(ClientRegister.class);
 
-     assertEquals("Francis", client1.getClientName());
-      //assertEquals(ClientType.Corporate, client2.getClientType());
-     // assertEquals(5432, client4.getClientID());
+    when(mockedRegister.query("SELECT * FROM CLIENTS")).
+
+    thenReturn(
+            Arrays.asList("Hanny",1234,ServiceLevel.Gold)  }
+    )
+
+*/
+
+    @Test
+   public void testGetCorporateAndPrivateClients() {
+        ClientRegister clientRegister = new ClientRegister(
+                Arrays.asList(
+     new CorporateClient("Francis Billa","Morgan Stanley",3272,ServiceLevel.Gold),
+     new PrivateClient("Sam",0034,ServiceLevel.Premium),
+     new PrivateClient("Alex",7564,ServiceLevel.Platinum),
+     new CorporateClient("Sam Moorhorse","Turntabl GH",5454,ServiceLevel.Premium),
+     new PrivateClient("Mary",4321,ServiceLevel.Gold),
+     new CorporateClient("  Vivian Boakye","Vee Capitals",7874,ServiceLevel.Platinum)
+
+     ));
+     assertEquals("ClientRegister", clientRegister.getClass().getSimpleName());
      }
 
 

@@ -1,6 +1,6 @@
 package io.turntabl;
 
-public class Client {
+public class Client implements ClientNameInterface {
 
     //VARIABLES
     private String clientName;  //Name of Client
@@ -17,12 +17,15 @@ public class Client {
     }
 
     //GETTER FOR CLIENT'S NAME
+    @Override
     public String getClientName() {
+
         return clientName;
     }
 
     //GETTER FOR CLIENT'S ID
     public int getClientID() {
+
         return clientID;
     }
 
